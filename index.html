@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Jindal | Aspiring Software Developer &amp; B.Tech CSE Student</title>
+  <meta name="description" content="Personal portfolio of Ayush Jindal, a first-year B.Tech Computer Science and Engineering (Core) student at JECRC University, Jaipur. Explore projects, technical skills, education, and learning roadmap.">
+  <meta name="keywords" content="Ayush Jindal, Portfolio, JECRC University, Computer Science, B.Tech CSE, Software Developer, Web Development, C++, DSA, Jaipur, India">
+  <meta name="author" content="Ayush Jindal">
+  <meta name="theme-color" content="#08090f">
+
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:title" content="Ayush Jindal | Portfolio">
+  <meta property="og:description" content="First-year B.Tech CSE (Core) student at JECRC University, Jaipur. Passionate about software development, algorithms, and web tech.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Particle Canvas Background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo" aria-label="Ayush Jindal Home">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">AJ</span> <span class="logo-slash">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-links" id="desktop-nav" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#learning" class="nav-link">Learning</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta">
+          <i class="fas fa-paper-plane"></i>
+          <span>Let's Talk</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> Home</a>
+        <a href="#about" class="mobile-nav-link"><i class="fas fa-user"></i> About</a>
+        <a href="#education" class="mobile-nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#skills" class="mobile-nav-link"><i class="fas fa-code"></i> Skills</a>
+        <a href="#achievements" class="mobile-nav-link"><i class="fas fa-award"></i> Achievements</a>
+        <a href="#projects" class="mobile-nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
+        <a href="#learning" class="mobile-nav-link"><i class="fas fa-compass"></i> Learning</a>
+        <a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        <div class="mobile-nav-footer">
+          <a href="#contact" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================
+         SECTION 1: HOME / HERO
+         ======================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span class="status-text">First-Year B.Tech CSE (Core) &bull; Open to Internships</span>
+          </div>
+
+          <p class="hero-greeting">Hello, world! I am</p>
+          <h1 class="hero-title">
+            Ayush <span class="gradient-text">Jindal</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span class="role-prefix">I am an&nbsp;</span>
+            <span class="typed-text" id="typed-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-bio">
+            First-year Computer Science and Engineering (Core) undergraduate at 
+            <strong class="highlight-text">JECRC University, Jaipur, Rajasthan</strong>. 
+            Driven by curiosity, algorithmic thinking, and building impactful digital experiences.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-rocket"></i>
+              <span>Explore Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i>
+              <span>Contact Me</span>
+            </a>
+            <button type="button" class="btn btn-ghost copy-email-btn" data-email="ayushjindal.placeholder@example.com" title="Click to copy email">
+              <i class="fas fa-copy"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-socials">
+            <span class="socials-label">Connect:</span>
+            <!-- EDITABLE PLACEHOLDERS: Replace href with your actual profile links -->
+            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile (Placeholder)">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile (Placeholder)">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://leetcode.com/your-username" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LeetCode Profile (Placeholder)">
+              <i class="fas fa-code"></i>
+            </a>
+            <a href="mailto:ayushjindal.placeholder@example.com" class="social-icon" aria-label="Email Me">
+              <i class="fas fa-at"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Quick Stats / Info Card -->
+        <div class="hero-visual">
+          <div class="profile-card glass-panel">
+            <div class="card-glow"></div>
+            <div class="profile-header">
+              <div class="avatar-ring">
+                <div class="avatar-inner">
+                  <span class="avatar-initials">AJ</span>
+                </div>
+              </div>
+              <div class="profile-title">
+                <h3>Ayush Jindal</h3>
+                <p>B.Tech CSE &bull; Class of 2028</p>
+                <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan</span>
+              </div>
+            </div>
+
+            <div class="quick-stats-grid">
+              <div class="stat-box">
+                <span class="stat-number">1st</span>
+                <span class="stat-label">Academic Year</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">Core</span>
+                <span class="stat-label">CSE Specialization</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">DSA Problems</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Dedication</span>
+              </div>
+            </div>
+
+            <div class="code-snippet-box">
+              <div class="snippet-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="snippet-title">developer.json</span>
+              </div>
+              <pre><code>{
+  <span class="json-key">"name"</span>: <span class="json-str">"Ayush Jindal"</span>,
+  <span class="json-key">"role"</span>: <span class="json-str">"Aspiring Dev"</span>,
+  <span class="json-key">"university"</span>: <span class="json-str">"JECRC University"</span>,
+  <span class="json-key">"focus"</span>: [<span class="json-str">"C++"</span>, <span class="json-str">"DSA"</span>, <span class="json-str">"Web Dev"</span>],
+  <span class="json-key">"status"</span>: <span class="json-str">"Ready for Internships"</span>
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ========================================================
+         SECTION 2: ABOUT ME
+         ======================================================== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-user"></i> Introduction</div>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">A glimpse into my background, passion for computing, and software development mindset.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Narrative -->
+          <div class="about-narrative glass-panel">
+            <h3 class="card-title"><i class="fas fa-lightbulb highlight-icon"></i> My Journey &amp; Mindset</h3>
+            <p>
+              I am a first-year Computer Science and Engineering (Core) undergraduate at <strong>JECRC University</strong> in Jaipur, Rajasthan. My fascination with technology began with a curiosity about how software powers our everyday world, which evolved into a genuine passion for programming, logic design, and problem solving.
+            </p>
+            <p>
+              Right from my first semester, I have been actively building strong fundamentals in <strong>C and C++</strong>, exploring Object-Oriented Programming, and practicing Data Structures and Algorithms. Concurrently, I enjoy crafting modern, accessible web interfaces that are both aesthetically pleasing and performant.
+            </p>
+            <p>
+              As an aspiring developer, I believe in consistency, curiosity, and learning by building. I am actively looking for software engineering internships, technical workshops, and mentorship opportunities where I can contribute actively while absorbing industry best practices.
+            </p>
+
+            <div class="values-list">
+              <div class="value-item">
+                <i class="fas fa-check-circle value-icon"></i>
+                <div>
+                  <strong>Analytical Thinking:</strong> Breaking complex problems into intuitive, step-by-step algorithms.
+                </div>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle value-icon"></i>
+                <div>
+                  <strong>Curiosity-Driven:</strong> Always eager to explore emerging web technologies and modern developer tools.
+                </div>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-check-circle value-icon"></i>
+                <div>
+                  <strong>Collaborative Spirit:</strong> Thriving in team settings, hackathons, and tech communities.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Key Profile Facts Card -->
+          <div class="about-details glass-panel">
+            <h3 class="card-title"><i class="fas fa-id-card highlight-icon"></i> Quick Profile Facts</h3>
+            
+            <div class="details-list">
+              <div class="detail-row">
+                <span class="detail-key"><i class="fas fa-user-graduate"></i> Academic Standing</span>
+                <span class="detail-val">B.Tech CSE (Core) - 1st Year (2024–2028)</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-key"><i class="fas fa-university"></i> Institution</span>
+                <span class="detail-val">JECRC University, Jaipur, Rajasthan</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-key"><i class="fas fa-map-marker-alt"></i> Location</span>
+                <span class="detail-val">Jaipur, Rajasthan, India</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-key"><i class="fas fa-school"></i> Schooling Foundation</span>
+                <span class="detail-val">St. Mary's School, Dwarka, New Delhi (12 Years)</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-key"><i class="fas fa-code-branch"></i> Core Interests</span>
+                <span class="detail-val">Data Structures &amp; Algorithms, Web Development, Software Engineering</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-key"><i class="fas fa-language"></i> Languages</span>
+                <span class="detail-val">English (Professional), Hindi (Native)</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-key"><i class="fas fa-briefcase"></i> Availability</span>
+                <span class="detail-val badge-available">Open for Internships &amp; Projects</span>
+              </div>
+            </div>
+
+            <div class="about-action-box">
+              <p>Looking for an enthusiastic, fast-learning engineering intern?</p>
+              <a href="#contact" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane"></i> Let's Discuss Opportunities
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 3: EDUCATION
+         ======================================================== -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-graduation-cap"></i> Academic Background</div>
+          <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">Academic foundations, ongoing coursework, and educational milestones.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Item 1: B.Tech at JECRC University -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-badge current">Current &bull; 2024 – 2028</span>
+                  <h3 class="timeline-institution">JECRC University</h3>
+                  <h4 class="timeline-degree">Bachelor of Technology (B.Tech) - Computer Science &amp; Engineering (Core)</h4>
+                </div>
+                <div class="timeline-location">
+                  <i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <div class="timeline-score">
+                  <!-- EDITABLE PLACEHOLDER: Update with your semester CGPA once declared -->
+                  <span class="score-pill"><i class="fas fa-star"></i> Status: 1st Year Underway (CGPA placeholder: [e.g., 8.5+ / In Progress])</span>
+                </div>
+                <p>
+                  Pursuing foundational computer science courses with an emphasis on structured programming, computational thinking, and mathematical foundations for computing.
+                </p>
+
+                <div class="coursework-box">
+                  <span class="coursework-title"><i class="fas fa-book"></i> Relevant Coursework &amp; Subjects:</span>
+                  <div class="pill-cloud">
+                    <span class="tech-pill">Programming for Problem Solving (C/C++)</span>
+                    <span class="tech-pill">Discrete Mathematics</span>
+                    <span class="tech-pill">Digital Logic &amp; Computer Architecture</span>
+                    <span class="tech-pill">Calculus &amp; Linear Algebra</span>
+                    <span class="tech-pill">Engineering Physics</span>
+                    <span class="tech-pill">Object-Oriented Basics</span>
+                  </div>
+                </div>
+
+                <div class="activity-notes">
+                  <i class="fas fa-info-circle"></i>
+                  <span>Actively participating in university coding sessions, developer seminars, and tech workshops.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Class XII -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-badge completed">Senior Secondary &bull; Class XII</span>
+                  <h3 class="timeline-institution">St. Mary's School</h3>
+                  <h4 class="timeline-degree">Senior Secondary Certificate (Class XII - Science / PCM)</h4>
+                </div>
+                <div class="timeline-location">
+                  <i class="fas fa-map-marker-alt"></i> Sector 19, Dwarka, New Delhi &bull; CBSE
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <div class="timeline-score">
+                  <span class="score-pill"><i class="fas fa-graduation-cap"></i> Science Stream (Physics, Chemistry &amp; Mathematics)</span>
+                </div>
+                <p>
+                  Completed senior secondary education with a rigorous curriculum in Physics, Chemistry, and Advanced Mathematics, building solid analytical and mathematical reasoning essential for computer science.
+                </p>
+                <div class="coursework-box">
+                  <span class="coursework-title"><i class="fas fa-book"></i> Key Focus Areas:</span>
+                  <div class="pill-cloud">
+                    <span class="tech-pill">Mathematics (Calculus &amp; Algebra)</span>
+                    <span class="tech-pill">Physics</span>
+                    <span class="tech-pill">Chemistry</span>
+                    <span class="tech-pill">Computer Science / Informatics</span>
+                    <span class="tech-pill">English</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Class X / 12 Years Schooling Foundation -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <span class="timeline-badge completed">Secondary &bull; Class X</span>
+                  <h3 class="timeline-institution">St. Mary's School</h3>
+                  <h4 class="timeline-degree">Secondary School Certificate (Class X)</h4>
+                </div>
+                <div class="timeline-location">
+                  <i class="fas fa-map-marker-alt"></i> Sector 19, Dwarka, New Delhi &bull; CBSE
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <div class="timeline-score">
+                  <span class="score-pill"><i class="fas fa-school"></i> 12 Years Continuous Schooling Foundation</span>
+                </div>
+                <p>
+                  Completed 12 years of foundational schooling at St. Mary's School, Dwarka, developing a well-rounded foundation in Science, Mathematics, Social Sciences, and Languages alongside extracurricular activities.
+                </p>
+                <div class="coursework-box">
+                  <span class="coursework-title"><i class="fas fa-book"></i> Core Subjects:</span>
+                  <div class="pill-cloud">
+                    <span class="tech-pill">Mathematics</span>
+                    <span class="tech-pill">Science</span>
+                    <span class="tech-pill">Social Studies</span>
+                    <span class="tech-pill">English &amp; Hindi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 4: TECHNICAL SKILLS
+         ======================================================== -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-tools"></i> Capabilities</div>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">Programming languages, tools, core concepts, and web technologies I work with.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Category 1: Programming Languages -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap gradient-indigo">
+                <i class="fas fa-code"></i>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Programming Languages</h3>
+                <p class="skill-category-desc">Core problem solving and logic building</p>
+              </div>
+            </div>
+
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-terminal"></i> C Language</span>
+                  <span class="skill-level">Proficient &bull; Academic Core</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-laptop-code"></i> C++</span>
+                  <span class="skill-level">Intermediate &bull; OOP &amp; DSA</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fab fa-js-square"></i> JavaScript (ES6+)</span>
+                  <span class="skill-level">Intermediate &bull; Web Logic</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+                  <span class="skill-level">Foundational &bull; Scripting</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 65%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 2: Web Technologies -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap gradient-purple">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Web Technologies</h3>
+                <p class="skill-category-desc">Building modern, responsive user interfaces</p>
+              </div>
+            </div>
+
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fab fa-html5"></i> HTML5 &amp; Semantic Web</span>
+                  <span class="skill-level">Advanced</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fab fa-css3-alt"></i> CSS3 &amp; Flexbox / Grid</span>
+                  <span class="skill-level">Advanced &bull; Animations</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-mobile-alt"></i> Responsive Web Design</span>
+                  <span class="skill-level">Proficient &bull; Mobile-First</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 88%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-palette"></i> Modern UI/UX &amp; Tailwind</span>
+                  <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 70%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 3: Core Computer Science -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap gradient-cyan">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Core CS Fundamentals</h3>
+                <p class="skill-category-desc">Computer science fundamentals and principles</p>
+              </div>
+            </div>
+
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-project-diagram"></i> Data Structures &amp; Algorithms</span>
+                  <span class="skill-level">Foundations &bull; Active Practice</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 75%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-cubes"></i> Object-Oriented Programming (OOP)</span>
+                  <span class="skill-level">Intermediate Concepts</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 78%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-stopwatch"></i> Time &amp; Space Complexity</span>
+                  <span class="skill-level">Big-O Analysis</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-database"></i> Database Fundamentals (SQL)</span>
+                  <span class="skill-level">Basics &bull; Queries</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 65%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 4: Tools & Developer Workflow -->
+          <div class="skill-card glass-panel">
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap gradient-indigo">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <div>
+                <h3 class="skill-category-title">Tools &amp; Workflow</h3>
+                <p class="skill-category-desc">Version control, editors, and deployment</p>
+              </div>
+            </div>
+
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span>
+                  <span class="skill-level">Version Control &bull; Collaboration</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 80%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-terminal"></i> VS Code &amp; Extensions</span>
+                  <span class="skill-level">Daily Driver Environment</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 90%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fab fa-linux"></i> Linux CLI / Bash Basics</span>
+                  <span class="skill-level">Shell &amp; Commands</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 70%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name"><i class="fas fa-cloud-upload-alt"></i> Vercel &amp; GitHub Pages</span>
+                  <span class="skill-level">Frontend Deployment</span>
+                </div>
+                <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 85%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 5: ACHIEVEMENTS, CERTIFICATIONS & WORKSHOPS
+         ======================================================== -->
+    <section id="achievements" class="section achievements-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-award"></i> Recognition &amp; Learning</div>
+          <h2 class="section-title">Achievements &amp; <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Verified milestones, course credentials, coding practice, and workshop participations.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Item 1: Academic Enrollment & Merit -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-badge"><i class="fas fa-university"></i> Academic</div>
+            <div class="achievement-icon-box">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3 class="achievement-title">B.Tech CSE (Core) Admission Merit</h3>
+            <p class="achievement-issuer">JECRC University, Jaipur &bull; 2024</p>
+            <p class="achievement-desc">
+              Secured admission into the core Computer Science &amp; Engineering cohort at JECRC University, pursuing a rigorous technical engineering curriculum.
+            </p>
+            <div class="achievement-footer">
+              <span class="status-chip verified"><i class="fas fa-check"></i> Enrolled &bull; 1st Year</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Competitive Programming Milestone -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-badge"><i class="fas fa-code"></i> Coding</div>
+            <div class="achievement-icon-box">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3 class="achievement-title">100+ Problem Solving Milestone</h3>
+            <p class="achievement-issuer">LeetCode / HackerRank / CodeChef &bull; Ongoing</p>
+            <p class="achievement-desc">
+              Actively solving algorithmic challenges covering arrays, strings, basic recursion, searching, sorting, and time complexity calculations.
+            </p>
+            <div class="achievement-footer">
+              <!-- EDITABLE PLACEHOLDER: Replace with your coding profile link -->
+              <a href="https://leetcode.com/your-username" target="_blank" rel="noopener noreferrer" class="link-styled">
+                View Coding Profile <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3: Workshop Certification -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-badge"><i class="fas fa-laptop-code"></i> Workshop</div>
+            <div class="achievement-icon-box">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <!-- EDITABLE PLACEHOLDER: Update with your university workshop title -->
+            <h3 class="achievement-title">Hands-on Web Dev &amp; Git Workshop</h3>
+            <p class="achievement-issuer">[University Tech Club / Organizer Name] &bull; [Month Year]</p>
+            <p class="achievement-desc">
+              Participated in an intensive hands-on session focusing on modern semantic HTML, CSS architecture, Git branching workflows, and GitHub collaboration.
+            </p>
+            <div class="achievement-footer">
+              <span class="status-chip verified"><i class="fas fa-certificate"></i> Participation Certificate</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Course Certification Placeholder -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-badge"><i class="fas fa-certificate"></i> Certification</div>
+            <div class="achievement-icon-box">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <!-- EDITABLE PLACEHOLDER: Replace with your certification (e.g. NPTEL / Coursera / freeCodeCamp) -->
+            <h3 class="achievement-title">Programming in C/C++ &amp; Problem Solving</h3>
+            <p class="achievement-issuer">[Issuing Organization - e.g., Coursera / NPTEL / HackerRank]</p>
+            <p class="achievement-desc">
+              Comprehensive certification covering pointers, memory management, functions, and structured problem-solving paradigms.
+            </p>
+            <div class="achievement-footer">
+              <!-- EDITABLE PLACEHOLDER: Link to credential or certificate ID -->
+              <span class="status-chip placeholder-chip">Credential ID: [YOUR-CERT-ID-HERE]</span>
+            </div>
+          </div>
+
+          <!-- Item 5: Web Design Certification Placeholder -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-badge"><i class="fas fa-certificate"></i> Certification</div>
+            <div class="achievement-icon-box">
+              <i class="fas fa-scroll"></i>
+            </div>
+            <!-- EDITABLE PLACEHOLDER: Replace with your actual course credential -->
+            <h3 class="achievement-title">Responsive Web Design Certification</h3>
+            <p class="achievement-issuer">[Issuing Body - e.g., freeCodeCamp / Udemy / Meta]</p>
+            <p class="achievement-desc">
+              Completed coursework on responsive layouts, CSS Flexbox, CSS Grid, media queries, and accessible design principles for modern web applications.
+            </p>
+            <div class="achievement-footer">
+              <!-- EDITABLE PLACEHOLDER: Link to your certificate -->
+              <span class="status-chip placeholder-chip">Credential: [Add Verification Link]</span>
+            </div>
+          </div>
+
+          <!-- Item 6: Hackathon / Ideathon Participation -->
+          <div class="achievement-card glass-panel">
+            <div class="achievement-badge"><i class="fas fa-lightbulb"></i> Event</div>
+            <div class="achievement-icon-box">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <!-- EDITABLE PLACEHOLDER: Update with your hackathon / tech event details -->
+            <h3 class="achievement-title">College Tech Fest / Hackathon Participant</h3>
+            <p class="achievement-issuer">JECRC University Tech Fest &bull; [2024 / 2025]</p>
+            <p class="achievement-desc">
+              Collaborated with peer engineering students to brainstorm tech-driven solutions for real-world campus and student management challenges.
+            </p>
+            <div class="achievement-footer">
+              <span class="status-chip verified"><i class="fas fa-check-circle"></i> Hackathon Attendee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 6: PROJECTS
+         ======================================================== -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-laptop-code"></i> Portfolio Work</div>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real code and practical implementations showcasing problem solving, software logic, and web design.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-controls" role="tablist" aria-label="Filter Projects">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Development</button>
+          <button class="filter-btn" data-filter="dsa" role="tab" aria-selected="false">Core CS &amp; Algorithms</button>
+          <button class="filter-btn" data-filter="tools" role="tab" aria-selected="false">Utilities &amp; Tools</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid">
+          <!-- Project 1: Algorithm & Sorting Visualizer -->
+          <article class="project-card glass-panel" data-category="dsa web">
+            <div class="project-preview">
+              <div class="project-badge">Featured &bull; DSA</div>
+              <div class="preview-mockup">
+                <div class="mockup-bar" style="height: 40px;"></div>
+                <div class="mockup-bar active" style="height: 75px;"></div>
+                <div class="mockup-bar" style="height: 55px;"></div>
+                <div class="mockup-bar swap" style="height: 90px;"></div>
+                <div class="mockup-bar" style="height: 30px;"></div>
+                <div class="mockup-bar" style="height: 65px;"></div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Algorithms</span>
+                <span class="tech-tag">HTML5 Canvas</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+
+              <h3 class="project-title">AlgoVisual &bull; Interactive Sorting Visualizer</h3>
+              <p class="project-desc">
+                An interactive web-based algorithm visualizer that demonstrates how Bubble Sort, Selection Sort, and Insertion Sort execute step-by-step. Users can adjust array size, toggle playback speed, and inspect comparison counts in real-time.
+              </p>
+
+              <div class="project-links">
+                <!-- EDITABLE PLACEHOLDER: Replace with your actual GitHub repo link -->
+                <a href="https://github.com/your-username/sorting-visualizer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+                <!-- EDITABLE PLACEHOLDER: Replace with your live demo link -->
+                <a href="https://your-username.github.io/sorting-visualizer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Personal Portfolio Website -->
+          <article class="project-card glass-panel" data-category="web">
+            <div class="project-preview">
+              <div class="project-badge">Live &bull; Web Design</div>
+              <div class="preview-mockup code-mockup">
+                <span class="mock-line">&lt;div class="portfolio"&gt;</span>
+                <span class="mock-line indent">&lt;h1&gt;Ayush Jindal&lt;/h1&gt;</span>
+                <span class="mock-line indent">&lt;p&gt;B.Tech CSE @ JECRC&lt;/p&gt;</span>
+                <span class="mock-line">&lt;/div&gt;</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3 Glassmorphism</span>
+                <span class="tech-tag">Vanilla JS</span>
+                <span class="tech-tag">Responsive UI</span>
+              </div>
+
+              <h3 class="project-title">Ayush Jindal &bull; Modern Developer Portfolio</h3>
+              <p class="project-desc">
+                The current personal portfolio site featuring a sleek obsidian dark theme, custom particle constellation canvas, responsive mobile navigation, interactive filtering, and clean component architecture with zero framework bloat.
+              </p>
+
+              <div class="project-links">
+                <a href="https://github.com/your-username/ayush-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+                <a href="#home" class="btn btn-sm btn-primary">
+                  <i class="fas fa-check-circle"></i> You are here
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Student Record Management System -->
+          <article class="project-card glass-panel" data-category="dsa tools">
+            <div class="project-preview">
+              <div class="project-badge">Core CS &bull; C++</div>
+              <div class="preview-mockup terminal-mockup">
+                <span class="term-line">&gt; ./student_manager</span>
+                <span class="term-line text-cyan">[1] Add Student [2] Search</span>
+                <span class="term-line text-green">&gt; Record created: JECRC-2024</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">OOPs</span>
+                <span class="tech-tag">File Handling</span>
+                <span class="tech-tag">Data Structures</span>
+              </div>
+
+              <h3 class="project-title">Student Record &amp; CGPA Management System</h3>
+              <p class="project-desc">
+                A robust CLI application built in C++ utilizing Object-Oriented principles (Encapsulation, Classes, File I/O Streams). Allows adding, updating, searching, and calculating semester CGPA for engineering student batches with data persistence.
+              </p>
+
+              <div class="project-links">
+                <a href="https://github.com/your-username/student-management-cpp" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+                <a href="https://github.com/your-username/student-management-cpp#readme" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                  <i class="fas fa-file-alt"></i> Documentation
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: DevBox - Web Utility Suite -->
+          <article class="project-card glass-panel" data-category="web tools">
+            <div class="project-preview">
+              <div class="project-badge">Utility &bull; JavaScript</div>
+              <div class="preview-mockup tool-mockup">
+                <div class="tool-box"><i class="fas fa-key"></i> PassGen</div>
+                <div class="tool-box"><i class="fas fa-exchange-alt"></i> Base64</div>
+                <div class="tool-box"><i class="fas fa-font"></i> CaseConv</div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">DOM Manipulation</span>
+                <span class="tech-tag">CSS Grid</span>
+                <span class="tech-tag">Web Tools</span>
+              </div>
+
+              <h3 class="project-title">DevBox &bull; Developer Mini-Utility Toolkit</h3>
+              <p class="project-desc">
+                A client-side productivity toolset for programmers including a cryptographically secure random password generator with entropy meters, string case converter, and Base64 encoder/decoder with one-click clipboard copying.
+              </p>
+
+              <div class="project-links">
+                <a href="https://github.com/your-username/devbox-utilities" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+                <a href="https://your-username.github.io/devbox-utilities" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 7: CURRENTLY LEARNING (ROADMAP)
+         ======================================================== -->
+    <section id="learning" class="section learning-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-compass"></i> Continuous Growth</div>
+          <h2 class="section-title">Currently <span class="gradient-text">Learning</span></h2>
+          <p class="section-subtitle">My active roadmap, ongoing technical pursuits, and upcoming milestones for 2025–2026.</p>
+        </div>
+
+        <div class="roadmap-grid">
+          <!-- Phase 1: In Active Progress -->
+          <div class="roadmap-card glass-panel active-phase">
+            <div class="roadmap-status">
+              <span class="status-indicator active"></span>
+              <span class="status-text">In Active Progress (Semester 1 &amp; 2)</span>
+            </div>
+
+            <div class="roadmap-header">
+              <div class="roadmap-icon"><i class="fas fa-code-branch"></i></div>
+              <div>
+                <h3 class="roadmap-title">Data Structures &amp; Modern C++</h3>
+                <p class="roadmap-time">Current Focus &bull; Daily Practice</p>
+              </div>
+            </div>
+
+            <ul class="roadmap-list">
+              <li><i class="fas fa-check-circle item-done"></i> Arrays, Strings &amp; 2D Matrices</li>
+              <li><i class="fas fa-check-circle item-done"></i> Recursion, Pointers &amp; Memory Allocation</li>
+              <li><i class="fas fa-spinner fa-spin item-in-progress"></i> Linked Lists, Stacks &amp; Queues</li>
+              <li><i class="fas fa-circle item-pending"></i> Binary Trees, BSTs &amp; Heaps</li>
+              <li><i class="fas fa-circle item-pending"></i> C++ Standard Template Library (STL) Mastery</li>
+            </ul>
+
+            <div class="roadmap-target">
+              <strong>Milestone Target:</strong> Solve 250+ LeetCode problems &amp; master core linear &amp; non-linear structures.
+            </div>
+          </div>
+
+          <!-- Phase 2: Next Milestone -->
+          <div class="roadmap-card glass-panel upcoming-phase">
+            <div class="roadmap-status">
+              <span class="status-indicator upcoming"></span>
+              <span class="status-text">Upcoming Focus (Next 3–6 Months)</span>
+            </div>
+
+            <div class="roadmap-header">
+              <div class="roadmap-icon"><i class="fab fa-react"></i></div>
+              <div>
+                <h3 class="roadmap-title">Modern Frontend &amp; React.js</h3>
+                <p class="roadmap-time">Summer 2025 Trajectory</p>
+              </div>
+            </div>
+
+            <ul class="roadmap-list">
+              <li><i class="fas fa-circle item-pending"></i> Component Architecture &amp; Virtual DOM</li>
+              <li><i class="fas fa-circle item-pending"></i> React Hooks (useState, useEffect, useMemo)</li>
+              <li><i class="fas fa-circle item-pending"></i> State Management &amp; Context API</li>
+              <li><i class="fas fa-circle item-pending"></i> Consuming REST APIs &amp; Async JavaScript</li>
+              <li><i class="fas fa-circle item-pending"></i> Tailwind CSS &amp; UI Component Libraries</li>
+            </ul>
+
+            <div class="roadmap-target">
+              <strong>Milestone Target:</strong> Build two full-featured Single Page React Applications.
+            </div>
+          </div>
+
+          <!-- Phase 3: Future Trajectory -->
+          <div class="roadmap-card glass-panel goal-phase">
+            <div class="roadmap-status">
+              <span class="status-indicator goal"></span>
+              <span class="status-text">Internship &amp; Career Objective</span>
+            </div>
+
+            <div class="roadmap-header">
+              <div class="roadmap-icon"><i class="fas fa-server"></i></div>
+              <div>
+                <h3 class="roadmap-title">Backend &amp; Industry Readiness</h3>
+                <p class="roadmap-time">Aiming for Summer 2026 Internships</p>
+              </div>
+            </div>
+
+            <ul class="roadmap-list">
+              <li><i class="fas fa-circle item-pending"></i> Node.js &amp; Express.js Backend Services</li>
+              <li><i class="fas fa-circle item-pending"></i> SQL / PostgreSQL &amp; MongoDB Databases</li>
+              <li><i class="fas fa-circle item-pending"></i> Authentication (JWT, OAuth) &amp; Web Security</li>
+              <li><i class="fas fa-circle item-pending"></i> Open Source Contributions on GitHub</li>
+              <li><i class="fas fa-circle item-pending"></i> System Design Fundamentals &amp; API Architecture</li>
+            </ul>
+
+            <div class="roadmap-target">
+              <strong>Milestone Target:</strong> Secure a software developer internship &amp; contribute to open-source repositories.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 8: CONTACT & GET IN TOUCH
+         ======================================================== -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-envelope"></i> Networking</div>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Have an internship opportunity, a project to collaborate on, or just want to say hi? I'd love to connect!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Cards -->
+          <div class="contact-info">
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <i class="fas fa-envelope-open-text"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-label">Email Address</span>
+                <!-- EDITABLE PLACEHOLDER: Update with your real email -->
+                <a href="mailto:ayushjindal.placeholder@example.com" class="contact-val">ayushjindal.placeholder@example.com</a>
+                <button type="button" class="copy-pill copy-email-btn" data-email="ayushjindal.placeholder@example.com">
+                  <i class="fas fa-copy"></i> Click to Copy Email
+                </button>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-label">LinkedIn</span>
+                <!-- EDITABLE PLACEHOLDER: Update with your real LinkedIn profile -->
+                <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" class="contact-val">
+                  linkedin.com/in/your-username
+                </a>
+                <span class="contact-subtext">Open for professional connections</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-label">GitHub</span>
+                <!-- EDITABLE PLACEHOLDER: Update with your real GitHub profile -->
+                <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="contact-val">
+                  github.com/your-username
+                </a>
+                <span class="contact-subtext">Explore my repositories &amp; code</span>
+              </div>
+            </div>
+
+            <div class="contact-card glass-panel">
+              <div class="contact-card-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-card-body">
+                <span class="contact-label">Location</span>
+                <span class="contact-val static">Jaipur, Rajasthan, India</span>
+                <span class="contact-subtext">JECRC University &bull; Available for remote / on-site internships</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-panel glass-panel">
+            <h3 class="form-title"><i class="fas fa-paper-plane highlight-icon"></i> Send a Message</h3>
+            <p class="form-desc">Fill out the form below to reach me directly. I will respond promptly.</p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+                  </div>
+                  <span class="field-error" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Your Email <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+                  </div>
+                  <span class="field-error" id="email-error"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fas fa-tag input-icon"></i>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="e.g. Internship Opportunity / Collaboration" required>
+                </div>
+                <span class="field-error" id="subject-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fas fa-comment-alt input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Share your message, project details, or internship query..." required></textarea>
+                </div>
+                <span class="field-error" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                <span id="submit-text">Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <span class="logo-bracket">&lt;</span><span class="logo-name">AJ</span> <span class="logo-slash">/&gt;</span>
+          </a>
+          <p class="footer-tagline">
+            Ayush Jindal &bull; 1st Year B.Tech CSE (Core) Student at JECRC University, Jaipur, Rajasthan.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <span class="footer-nav-title">Quick Links</span>
+          <div class="footer-links-grid">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#projects">Projects</a>
+            <a href="#learning">Roadmap</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-socials-col">
+          <span class="footer-nav-title">Connect</span>
+          <div class="footer-social-icons">
+            <!-- EDITABLE PLACEHOLDERS: Replace with your actual profiles -->
+            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://leetcode.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+            <a href="mailto:ayushjindal.placeholder@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> <strong>Ayush Jindal</strong>. All rights reserved. Crafted with clean code &amp; modern web standards.
+        </p>
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top">
+          <i class="fas fa-arrow-up"></i>
+          <span>Back to Top</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
